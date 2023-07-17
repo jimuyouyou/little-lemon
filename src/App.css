@@ -37,6 +37,21 @@
   }
 }
 
-nav ul {
-  display: grid;
+.logo img {
+  max-width: 13rem;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links {
+  display: flex;
+}
+
+.nav-links .nav-item {
+  list-style: none;
+  padding: 0.5rem;
 }
