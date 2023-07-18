@@ -1,5 +1,10 @@
-export default function BookingPage() {
+import BookingForm from "./BookingForm";
+
+export default function BookingPage(props) {
+  const { availableTime, onTimeUpdate } = props;
+
   return <>
-  This is the BookingPage
+    This is the BookingPage
+    <BookingForm availableTime={availableTime} onTimeUpdate={onTimeUpdate} />
   </>;
 }
