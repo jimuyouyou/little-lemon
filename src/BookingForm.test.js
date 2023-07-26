@@ -1,8 +1,17 @@
 import { render, screen } from "@testing-library/react";
-import BookingForm from "./components/BookingForm";
+import React from "react";
+import { MemoryRouter, Route, Routes } from "react-router-dom";
+import BookingForm from "./components/sections/reservePages/BookingForm";
 
-test("BookingForm", () => {
-  render(<BookingForm />);
-  const linkElement = screen.getByText(/Choose time/i);
+test("First Name", () => {
+  render(
+    <MemoryRouter>
+      <Routes>
+        <Route path="/" element={<BookingForm availableTimes={['17:00', '18:00', '19:00', '20:00']} />} />
+      </Routes>
+    </MemoryRouter>,
+  );
+
+  const linkElement = screen.getByText(/First Name/i);
   expect(linkElement).toBeInTheDocument();
 });
