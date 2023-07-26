@@ -1,7 +1,7 @@
 export default function HomePage() {
   return (
   <div>
-    We are a family owned Mediterranean restaurant, focused on traditional recipes served with a modern twist.
+    We focus on traditional recipes of all coutries of the world.
   </div>
   );
 }
